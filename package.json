@@ -1,0 +1,15 @@
+{
+  "name": "auto-servis-kvartasi",
+  "version": "1.0.0",
+  "description": "Kvartaši Auto Servis - Website",
+  "type": "module",
+  "scripts": {
+    "build": "node build-speed-insights.js"
+  },
+  "keywords": ["auto-servis", "vercel"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  }
+}
