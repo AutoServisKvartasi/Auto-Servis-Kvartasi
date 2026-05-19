@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kvartaši Auto Servis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0b0b0f;
+color:white;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+.topbar{
+background:#000;
+padding:10px 0;
+border-bottom:1px solid #222;
+font-size:14px;
+}
+
+.topbar .container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+background:#0d0d12;
+padding:20px 0;
+border-bottom:1px solid #222;
+}
+
+.navbar .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:800;
+color:#fff;
+}
+
+.logo span{
+color:#ff1e1e;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#ff1e1e;
+}
+
+.btn{
+background:#ff1e1e;
+padding:14px 28px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+background:#ff3434;
+}
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1920&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h3{
+font-size:32px;
+font-weight:400;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:88px;
+font-weight:800;
+line-height:1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+color:#ddd;
+margin-bottom:40px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.services{
+padding:100px 0;
+background:#111;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.section-title span{
+color:#ff1e1e;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#18181f;
+padding:35px;
+border-radius:16px;
+border:1px solid #2a2a33;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#ff1e1e;
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#ff1e1e;
+}
+
+.about{
+padding:100px 0;
+background:#0b0b0f;
+}
+
+.about-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-top:40px;
+}
+
+.stat{
+background:#15151d;
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+.stat h2{
+color:#ff1e1e;
+font-size:42px;
+}
+
+.booking{
+padding:100px 0;
+background:#111;
+}
+
+.form-box{
+background:#18181f;
+padding:40px;
+border-radius:20px;
+max-width:700px;
+margin:auto;
+border:1px solid #2b2b36;
+}
+
+form{
+display:grid;
+gap:20px;
+}
+
+input,textarea,select{
+padding:16px;
+background:#0f0f14;
+border:1px solid #333;
+border-radius:10px;
+color:white;
+font-size:16px;
+}
+
+footer{
+padding:50px 0;
+background:#000;
+border-top:1px solid #222;
+margin-top:80px;
+}
+
+footer .container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:58px;
+}
+
+.about-wrapper{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<div class="container">
+<div>📍 Podgorica, Branka Radičevića BB, Crna Gora</div>
+<div>📞 069 699 025</div>
+<div>🕒 Pon - Pet: 09:00 - 18:00</div>
+</div>
+</div>
+
+<nav class="navbar">
+<div class="container">
+<div class="logo">KVARTAŠI <span>AUTO SERVIS</span></div>
+
+<div class="nav-links">
+<a href="#">Početna</a>
+<a href="#">Usluge</a>
+<a href="#">O nama</a>
+<a href="#">Galerija</a>
+<a href="#">Kontakt</a>
+</div>
+
+<a href="#" class="btn">Zakaži termin</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<h3>AUTO SERVIS</h3>
+<h1>KVARTAŠI</h1>
+<p>Pouzdan servis. Kvalitet bez kompromisa. Mehanika, dijagnostika, klima servis, vulkanizer i još mnogo toga.</p>
+
+<div class="hero-buttons">
+<a href="#" class="btn">Zakaži termin</a>
+<a href="#" class="btn" style="background:#222;">Pozovi nas</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="services">
+<div class="container">
+
+<div class="section-title">
+<span>NAŠE USLUGE</span>
+<h2>Kompletna briga za vaše vozilo</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Mehanika</h3>
+<p>Popravka svih tipova vozila, trapovi, kočnice i veliki servis.</p>
+</div>
+
+<div class="card">
+<h3>Dijagnostika</h3>
+<p>Profesionalna kompjuterska dijagnostika i analiza grešaka.</p>
+</div>
+
+<div class="card">
+<h3>Klima servis</h3>
+<p>Punjenje i održavanje klima sistema uz dezinfekciju.</p>
+</div>
+
+<div class="card">
+<h3>Redovni servis</h3>
+<p>Zamena ulja, filtera i kompletan pregled vozila.</p>
+</div>
+
+<div class="card">
+<h3>Pneumatici</h3>
+<p>Montaža, balansiranje i čuvanje pneumatika.</p>
+</div>
+
+<div class="card">
+<h3>Pranje vozila</h3>
+<p>Dubinsko i spoljašnje pranje sa premium hemijom.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="about">
+<div class="container">
+<div class="about-wrapper">
+
+<div>
+<h2 style="font-size:48px;margin-bottom:20px;">Zašto odabrati Kvartaši?</h2>
+<p style="color:#ccc;">
+Sa dugogodišnjim iskustvom i stručnim timom garantujemo kvalitet,
+brzinu i sigurnost za vaše vozilo.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<h2>10+</h2>
+<p>Godina iskustva</p>
+</div>
+
+<div class="stat">
+<h2>5000+</h2>
+<p>Zadovoljnih klijenata</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Garancija</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Podrška</p>
+</div>
+
+</div>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="booking">
+<div class="container">
+
+<div class="section-title">
+<span>ZAKAŽI TERMIN</span>
+<h2>Brzo i jednostavno</h2>
+</div>
+
+<div class="form-box">
+
+<form action="https://formsubmit.co/autoserviskvartasi@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Nova rezervacija termina - Kvartaši Auto Servis">
+
+<input type="text" name="ime" placeholder="Ime i prezime" required>
+<input type="tel" name="telefon" placeholder="Telefon" required>
+<input type="email" name="email" placeholder="Email" required>
+
+<select name="usluga" required>
+<option value="">Izaberi uslugu</option>
+<option>Mehanika</option>
+<option>Dijagnostika</option>
+<option>Klima servis</option>
+<option>Pneumatici</option>
+</select>
+
+<textarea name="napomena" rows="5" placeholder="Dodatne napomene"></textarea>
+
+<button type="submit" class="btn" style="border:none;cursor:pointer;">
+Pošalji zahtev
+</button>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div>
+<h2>KVARTAŠI</h2>
+<p>Vaš pouzdan partner za servis vozila.</p>
+</div>
+
+<div>
+<h3>Kontakt</h3>
+<p>📍 Podgorica, Crna Gora</p>
+<p>📞 069 699 025</p>
+<p>✉ autoserviskvartasi@gmail.com</p>
+</div>
+
+<div>
+<h3>Radno vreme</h3>
+<p>Pon - Pet: 09:00 - 18:00</p>
+<p>Sub: 08:00 - 14:00</p>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
